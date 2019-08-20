@@ -1,0 +1,40 @@
+.container{
+  border: 1px solid darkslategray;
+  margin: 30px auto;
+  width: 70%;
+  padding: 20px 50px;
+}
+button{
+  background-color: firebrick;
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid darkslategray;
+  margin: 10px 0;
+}
+li strong{
+  background-color: #eeeeee;
+  width: 20px;
+  padding: 8px 10px;
+}
+li div{
+  flex: 1;
+}
+input{
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.text-center{
+  text-align: center;
+}

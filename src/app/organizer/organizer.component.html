@@ -1,0 +1,22 @@
+<div class="container">
+  <header>
+    <h3>Organizer: {{ dateService.gettingDate | async | moment: 'DD.MM.YYYY' }}</h3>
+  </header>
+  <main>
+    <ul *ngIf = "taskList.length; else noTasks">
+      <li *ngFor="let item of taskList; let i = index">
+        <strong>{{ i + 1 }}</strong>
+        <div>{{ item.title }}</div>
+        <button (click) = "deleteTask(item)">Remove</button></li>
+    </ul>
+    <ng-template #noTasks>
+      <p class="text-center">No Tasks yet...</p>
+    </ng-template>
+  </main>
+  <footer>
+    <form action="#" (ngSubmit)="addTask()" [formGroup]="form" >
+      <input type="text" value="" formControlName = "task">
+      <button type="submit" [disabled]="form.invalid" >Add</button>
+    </form>
+  </footer>
+</div>

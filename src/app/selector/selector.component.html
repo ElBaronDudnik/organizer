@@ -1,0 +1,5 @@
+<p>
+  <i class="material-icons" (click) = "changeMonth(-1)">keyboard_arrow_left</i>
+  <span>{{dateService.gettingDate | async | moment}}</span>
+  <i class="material-icons" (click) = "changeMonth(1)">keyboard_arrow_right</i>
+</p>
